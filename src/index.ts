@@ -5,5 +5,6 @@
  */
 
 export * from "./debounce";
+export * from "./declare";
 export * from "./throttle";
 

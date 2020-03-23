@@ -15,7 +15,9 @@ describe('Given {Debounce} Class', (): void => {
 
     it('should be able to construct', (): void => {
 
-        const instance: Debounce = Debounce.create();
+        const instance: Debounce = Debounce.create(() => {
+            return;
+        }, 1000);
         expect(instance).to.be.instanceOf(Debounce);
     });
 });
