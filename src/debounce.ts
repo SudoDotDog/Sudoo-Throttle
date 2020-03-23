@@ -26,13 +26,13 @@ export class Debounce<Args extends any[] = []> {
 
     public execute(...args: Args): void {
 
-        this.cancel();
+        this.reset();
         this._timer = setTimeout(async () => {
             await Promise.resolve(this._func(...args));
         }, this._delay);
     }
 
-    public cancel(): this {
+    public reset(): this {
 
         if (this._timer) {
             clearTimeout(this._timer);
