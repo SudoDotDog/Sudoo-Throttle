@@ -9,4 +9,8 @@ export class Throttle {
     public static create(): Throttle {
         return new Throttle();
     }
+
+    private constructor() {
+
+    }
 }

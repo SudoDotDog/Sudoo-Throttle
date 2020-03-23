@@ -4,5 +4,6 @@
  * @description index
  */
 
+export * from "./debounce";
 export * from "./throttle";
 
