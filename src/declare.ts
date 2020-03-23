@@ -4,4 +4,4 @@
  * @description Declare
  */
 
-export type ExecuteFunction = () => (void | Promise<void>);
+export type ExecuteFunction<Args extends any[]> = (...args: Args) => (void | Promise<void>);

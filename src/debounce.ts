@@ -6,29 +6,29 @@
 
 import { ExecuteFunction } from "./declare";
 
-export class Debounce {
+export class Debounce<Args extends any[] = []> {
 
-    public static create(func: ExecuteFunction, delay: number): Debounce {
+    public static create<Args extends any[] = []>(func: ExecuteFunction<Args>, delay: number): Debounce<Args> {
 
         return new Debounce(func, delay);
     }
 
-    private readonly _func: ExecuteFunction;
+    private readonly _func: ExecuteFunction<Args>;
     private readonly _delay: number;
 
     private _timer?: any;
 
-    private constructor(func: ExecuteFunction, delay: number) {
+    private constructor(func: ExecuteFunction<Args>, delay: number) {
 
         this._func = func;
         this._delay = delay;
     }
 
-    public execute(): void {
+    public execute(...args: Args): void {
 
         this.cancel();
         this._timer = setTimeout(async () => {
-            await Promise.resolve(this._func());
+            await Promise.resolve(this._func(...args));
         }, this._delay);
     }
 
