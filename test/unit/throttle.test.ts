@@ -15,7 +15,9 @@ describe('Given {Throttle} Class', (): void => {
 
     it('should be able to construct', (): void => {
 
-        const instance: Throttle = Throttle.create();
+        const instance: Throttle = Throttle.create(() => {
+            return;
+        }, 1000);
         expect(instance).to.be.instanceOf(Throttle);
     });
 });
