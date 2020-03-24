@@ -26,13 +26,19 @@ export class Throttle<Args extends any[] = []> {
         this._lastExecuteTime = 0;
     }
 
-    public execute(...args: Args): void {
+    public ready(): boolean {
 
         const now: number = Date.now();
         const difference: number = now - this._lastExecuteTime;
 
-        if (difference > this._delay) {
+        return difference > this._delay;
+    }
 
+    public execute(...args: Args): void {
+
+        if (this.ready()) {
+
+            const now: number = Date.now();
             this._lastExecuteTime = now;
             Promise.resolve(this._func(...args));
         }
