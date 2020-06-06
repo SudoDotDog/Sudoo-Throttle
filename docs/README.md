@@ -6,3 +6,11 @@
 [![downloads](https://img.shields.io/npm/dm/@sudoo/throttle.svg)](https://www.npmjs.com/package/@sudoo/throttle)
 
 :mushroom: Throttle for Node
+
+## Install
+
+```sh
+yarn add @sudoo/throttle
+# Or
+npm install @sudoo/throttle --save
+```
