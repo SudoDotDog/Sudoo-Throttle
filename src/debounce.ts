@@ -6,7 +6,7 @@
 
 import { ExecuteFunction } from "./declare";
 
-export class Debounce<Args extends any[] = []> {
+export class Debounce<Args extends any[]> {
 
     public static create<Args extends any[] = []>(func: ExecuteFunction<Args>, delay: number): Debounce<Args> {
 
