@@ -27,8 +27,8 @@ export class Debounce<Args extends any[]> {
     public execute(...args: Args): void {
 
         this.reset();
-        this._timer = setTimeout(async () => {
-            await Promise.resolve(this._func(...args));
+        this._timer = setTimeout(() => {
+            Promise.resolve(this._func(...args));
         }, this._delay);
     }
 
