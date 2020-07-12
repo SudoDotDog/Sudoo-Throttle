@@ -11,6 +11,7 @@ import { Throttle } from "../../src";
 
 describe('Given {Throttle} Class', (): void => {
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const chance: Chance.Chance = new Chance('throttle-throttle');
 
     it('should be able to construct', (): void => {
