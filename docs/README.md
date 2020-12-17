@@ -28,3 +28,17 @@ for(1000 Times){
     throttle.execute(args); // Only one will be executed every 1000 ms
 }
 ```
+
+## Debounce
+
+```ts
+import { Debounce } from "@sudoo/throttle";
+
+const debounce = Debounce.create(async (...args) => {
+    await doSomethingCostALot(args);
+}, 1000);
+
+for(1000 Times){
+    debounce.execute(args); // Only the last call will be executed since all action called within 1000 ms
+}
+```
