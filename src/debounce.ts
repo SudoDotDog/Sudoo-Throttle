@@ -8,6 +8,7 @@ import { ExecuteFunction } from "./declare";
 
 export class Debounce<Args extends any[] = []> {
 
+    // eslint-disable-next-line @typescript-eslint/no-shadow
     public static create<Args extends any[] = []>(func: ExecuteFunction<Args>, delay: number): Debounce<Args> {
 
         return new Debounce(func, delay);
