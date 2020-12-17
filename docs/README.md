@@ -14,3 +14,17 @@ yarn add @sudoo/throttle
 # Or
 npm install @sudoo/throttle --save
 ```
+
+## Throttle
+
+```ts
+import { Throttle } from "@sudoo/throttle";
+
+const throttle = Throttle.create(async (...args) => {
+    await doSomethingCostALot(args);
+}, 1000);
+
+for(1000 Times){
+    throttle.execute(args); // Only one will be executed every 1000 ms
+}
+```
