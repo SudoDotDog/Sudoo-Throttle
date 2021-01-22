@@ -27,6 +27,8 @@ const throttle = Throttle.create(async (...args) => {
 for(1000 Times){
     throttle.execute(args); // Only one will be executed every 1000 ms
 }
+
+throttle.reset(); // Cancel
 ```
 
 ## Debounce
