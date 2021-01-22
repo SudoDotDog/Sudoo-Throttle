@@ -43,4 +43,6 @@ const debounce = Debounce.create(async (...args) => {
 for(1000 Times){
     debounce.execute(args); // Only the last call will be executed since all action called within 1000 ms
 }
+
+debounce.reset(); // Cancel
 ```
