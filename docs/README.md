@@ -5,7 +5,7 @@
 [![npm version](https://badge.fury.io/js/%40sudoo%2Fthrottle.svg)](https://www.npmjs.com/package/@sudoo/throttle)
 [![downloads](https://img.shields.io/npm/dm/@sudoo/throttle.svg)](https://www.npmjs.com/package/@sudoo/throttle)
 
-:mushroom: Throttle for Node
+Throttle for Node
 
 ## Install
 

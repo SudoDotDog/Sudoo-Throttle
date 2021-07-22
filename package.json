@@ -1,7 +1,7 @@
 {
   "name": "@sudoo/throttle",
   "version": "1.0.0",
-  "description": ":mushroom: Throttle for Node",
+  "description": "Throttle for Node",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SudoDotDog/Sudoo-Throttle.git"
